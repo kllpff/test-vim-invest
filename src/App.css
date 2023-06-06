@@ -1,38 +1,125 @@
-.App {
-  text-align: center;
+:root {
+  --main-color: #2D0838;
+  --accent-color: #A64731;
+  --accent-secondary: #F89E82;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
+  font-size: 18px;
   min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--main-color);
+  color: var(--main-color);
+}
+
+.wrapper {
+  max-width: 360px;
+  margin: 0 auto;
+  padding: 20px 0;
+  min-height: 100vh;
+}
+
+.list {
+  gap: 20px;
   display: flex;
+  padding: 30px;
+  margin-top: 20px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border-radius: 20px;
+  background-color: var(--accent-color);
 }
 
-.App-link {
-  color: #61dafb;
+.item {
+  padding: 15px 10px;
+  border-radius: 20px;
+  color: var(--accent-secondary);
+  background-color: var(--main-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item::selection {
+  color: #F89E82;
+  background-color: #2D0838;
+}
+
+.name {
+  margin-bottom: 10px;
+}
+
+.btn-warp {
+  gap: 10px;
+  display: flex;
+  justify-content: flex-start;
+}
+.btn {
+  border: 0;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px 12px;
+  color: var(--main-color);
+  border-radius: 15px;
+  transition: background-color .3s ease;
+  background-color: var(--accent-secondary);
+}
+
+.btn:hover {
+  background-color: var(--accent-color);
+}
+.btn--form {
+  width: 105px;
+}
+
+.birthday {
+  margin-bottom: 10px;
+}
+.height {
+  margin-bottom: 20px;
+}
+
+.form {
+  gap: 10px;
+  display: flex;
+  margin-top: 10px;
+  flex-direction: column;
+  color: var(--accent-secondary);
+}
+.form--update {
+  margin-top: 0;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: var(--main-color);
+}
+
+.form p {
+  margin-bottom: 5px;
+}
+
+.input {
+  border: 0;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: var(--main-color);
+  transition: background-color 0.3s ease;
+  background-color: var(--accent-secondary);
+}
+.input::placeholder {
+  color: var(--main-color);
+}
+.input:focus {
+  background-color: var(--accent-color);
+}
+.input--filter {
+  margin-top: 30px;
 }
